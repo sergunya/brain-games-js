@@ -6,3 +6,15 @@
 
 ### GitHub actions status:
 [![Run eslint and npm publish dry-run](https://github.com/sergunya/frontend-project-lvl1/actions/workflows/makefile.yml/badge.svg)](https://github.com/sergunya/frontend-project-lvl1/actions/workflows/makefile.yml)
+
+
+### Brain even game
+
+[![asciicast](https://asciinema.org/a/465042.svg)](https://asciinema.org/a/465042)
+
+Quick start:
+* Clone project: git clone https://github.com/sergunya/frontend-project-lvl1.git
+* cd frontend-project-lvl1
+* Install package: npm ci
+* Make package is public on your system: npm link
+* Start game: brain-even
