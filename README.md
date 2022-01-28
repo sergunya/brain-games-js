@@ -12,7 +12,7 @@
 
 [![asciicast](https://asciinema.org/a/465042.svg)](https://asciinema.org/a/465042)
 
-Quick start:
+#### Quick start:
 * Clone project: git clone https://github.com/sergunya/frontend-project-lvl1.git
 * cd frontend-project-lvl1
 * Install package: npm ci
