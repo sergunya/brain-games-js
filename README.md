@@ -13,8 +13,8 @@
 [![asciicast](https://asciinema.org/a/465042.svg)](https://asciinema.org/a/465042)
 
 #### Quick start:
-* Clone project: git clone https://github.com/sergunya/frontend-project-lvl1.git
-* cd frontend-project-lvl1
-* Install package: npm ci
-* Make package is public on your system: npm link
-* Start game: brain-even
+* Clone project: `git clone https://github.com/sergunya/frontend-project-lvl1.git`
+* Go to cloned project: `cd frontend-project-lvl1`
+* Install package: `npm ci`
+* Make package is public on your system: `npm link`
+* Start game: `brain-even`
