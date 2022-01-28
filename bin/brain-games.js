@@ -2,5 +2,4 @@
 
 import sayHelloToUser from '../src/cli.js';
 
-console.log('Welcome to the Brain Games!');
-console.log(sayHelloToUser());
+console.log(`Hello, ${sayHelloToUser()}!`);
