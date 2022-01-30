@@ -7,6 +7,7 @@
 ### GitHub actions status:
 [![Run eslint and npm publish dry-run](https://github.com/sergunya/frontend-project-lvl1/actions/workflows/makefile.yml/badge.svg)](https://github.com/sergunya/frontend-project-lvl1/actions/workflows/makefile.yml)
 
+-----------
 
 ### How to install and start to play
 * Clone project: `git clone https://github.com/sergunya/frontend-project-lvl1.git`
@@ -14,6 +15,8 @@
 * Install package: `npm ci`
 * Make package is public on your system: `npm link`
 * For starting game, you need just type game name in terminal, for instance: `brain-even`
+
+-----------
 
 ### Examples
 
