@@ -1,4 +1,4 @@
-const generateNumber = () => Math.floor(Math.random() * 20);
+import generateNum from './utils.js';
 
 export const getGcdGameTask = () => 'Find the greatest common divisor of given numbers.';
 
@@ -12,8 +12,8 @@ const gcd = (n, m) => {
 };
 
 export const playGcdGame = () => {
-  const firstNum = generateNumber();
-  const secondNum = generateNumber();
+  const firstNum = generateNum(1, 20);
+  const secondNum = generateNum(1, 20);
 
   console.log(`Question: ${firstNum} ${secondNum}`);
   const result = gcd(firstNum, secondNum);
