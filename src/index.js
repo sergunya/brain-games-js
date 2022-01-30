@@ -4,6 +4,7 @@ import { playBrainEvenGame, getEvenGameTask } from './games/brain_even_game.js';
 import { playBrainCalcGame, getCalcGameTask } from './games/brain_calc_game.js';
 import { playGcdGame, getGcdGameTask } from './games/brain_gcd_game.js';
 import { playBrainProgression, getProgressionGameTask } from './games/brain_progression_game.js';
+import { playBrainPrimeGame, getPrimeGameTask } from './games/brain_prime_game.js';
 
 const chooseGame = (gameName) => {
   switch (gameName) {
@@ -19,6 +20,9 @@ const chooseGame = (gameName) => {
     case 'brain-progression':
       readlineSync.question(getProgressionGameTask());
       return playBrainProgression;
+    case 'brain-prime':
+      readlineSync.question(getPrimeGameTask());
+      return playBrainPrimeGame;
     default:
       readlineSync.question(getEvenGameTask());
       return playBrainEvenGame;
