@@ -8,25 +8,20 @@
 [![Run eslint and npm publish dry-run](https://github.com/sergunya/frontend-project-lvl1/actions/workflows/makefile.yml/badge.svg)](https://github.com/sergunya/frontend-project-lvl1/actions/workflows/makefile.yml)
 
 
-### Brain even game
+### How to install and start to play
+* Clone project: `git clone https://github.com/sergunya/frontend-project-lvl1.git`
+* Go to cloned project: `cd frontend-project-lvl1`
+* Install package: `npm ci`
+* Make package is public on your system: `npm link`
+* For starting game, you need just type game name in terminal, for instance: `brain-even`
 
+### Examples
+
+#### Brain even game
 [![asciicast](https://asciinema.org/a/465042.svg)](https://asciinema.org/a/465042)
 
-#### Quick start:
-* Clone project: `git clone https://github.com/sergunya/frontend-project-lvl1.git`
-* Go to cloned project: `cd frontend-project-lvl1`
-* Install package: `npm ci`
-* Make package is public on your system: `npm link`
-* Start game: `brain-even`
 
-
-### Brain calc game
-
+#### Brain calc game
 [![asciicast](https://asciinema.org/a/465196.svg)](https://asciinema.org/a/465196)
 
-#### Quick start:
-* Clone project: `git clone https://github.com/sergunya/frontend-project-lvl1.git`
-* Go to cloned project: `cd frontend-project-lvl1`
-* Install package: `npm ci`
-* Make package is public on your system: `npm link`
-* Start game: `brain-calc`
+#### Brain gcd game

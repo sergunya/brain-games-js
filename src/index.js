@@ -3,24 +3,26 @@ import sayHelloToUser from './cli.js';
 import { playBrainEvenGame, getEvenGameTask } from './games/brain_even_game.js';
 import { playBrainCalcGame, getCalcGameTask } from './games/brain_calc_game.js';
 import { playGcdGame, getGcdGameTask } from './games/brain_gcd_game.js';
+import { playBrainProgression, getProgressionGameTask } from './games/brain_progression_game.js';
 
 const chooseGame = (gameName) => {
-  if (gameName === 'brain-even') {
-    readlineSync.question(getEvenGameTask());
-    return playBrainEvenGame;
+  switch (gameName) {
+    case 'brain-even':
+      readlineSync.question(getEvenGameTask());
+      return playBrainEvenGame;
+    case 'brain-calc':
+      readlineSync.question(getCalcGameTask());
+      return playBrainCalcGame;
+    case 'brain-gcd':
+      readlineSync.question(getGcdGameTask());
+      return playGcdGame;
+    case 'brain-progression':
+      readlineSync.question(getProgressionGameTask());
+      return playBrainProgression;
+    default:
+      readlineSync.question(getEvenGameTask());
+      return playBrainEvenGame;
   }
-
-  if (gameName === 'brain-calc') {
-    readlineSync.question(getCalcGameTask());
-    return playBrainCalcGame;
-  }
-
-  if (gameName === 'brain-gcd') {
-    readlineSync.question(getGcdGameTask());
-    return playGcdGame;
-  }
-
-  return undefined;
 };
 
 const startGame = (gameName) => {
