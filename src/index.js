@@ -9,22 +9,22 @@ import { playBrainPrimeGame, getPrimeGameTask } from './games/brain_prime_game.j
 const chooseGame = (gameName) => {
   switch (gameName) {
     case 'brain-even':
-      readlineSync.question(getEvenGameTask());
+      console.log(getEvenGameTask());
       return playBrainEvenGame;
     case 'brain-calc':
-      readlineSync.question(getCalcGameTask());
+      console.log(getCalcGameTask());
       return playBrainCalcGame;
     case 'brain-gcd':
-      readlineSync.question(getGcdGameTask());
+      console.log(getGcdGameTask());
       return playGcdGame;
     case 'brain-progression':
-      readlineSync.question(getProgressionGameTask());
+      console.log(getProgressionGameTask());
       return playBrainProgression;
     case 'brain-prime':
-      readlineSync.question(getPrimeGameTask());
+      console.log(getPrimeGameTask());
       return playBrainPrimeGame;
     default:
-      readlineSync.question(getEvenGameTask());
+      console.log(getEvenGameTask());
       return playBrainEvenGame;
   }
 };
