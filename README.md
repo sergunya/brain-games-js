@@ -20,11 +20,11 @@
 #### Brain even game
 [![asciicast](https://asciinema.org/a/465042.svg)](https://asciinema.org/a/465042)
 
-
 #### Brain calc game
 [![asciicast](https://asciinema.org/a/465196.svg)](https://asciinema.org/a/465196)
 
 #### Brain gcd game
+[![asciicast](https://asciinema.org/a/465542.svg)](https://asciinema.org/a/465542)
 
-
-### Brain progression game 
+#### Brain progression game 
+[![asciicast](https://asciinema.org/a/465544.svg)](https://asciinema.org/a/465544)
