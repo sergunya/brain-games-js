@@ -30,3 +30,4 @@
 [![asciicast](https://asciinema.org/a/465544.svg)](https://asciinema.org/a/465544)
 
 #### Brain prime game
+[![asciicast](https://asciinema.org/a/465547.svg)](https://asciinema.org/a/465547)
