@@ -23,7 +23,7 @@ export const playBrainProgression = () => {
   const correctAnswer = generatedArray[hiddenIndex];
   generatedArray[hiddenIndex] = '..';
 
-  console.log(`Question: ${generatedArray}`);
+  console.log(`Question: ${generatedArray.join(' ')}`);
 
   return correctAnswer.toString();
 };
