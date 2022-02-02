@@ -27,9 +27,10 @@ const playBrainProgression = () => {
   const correctAnswer = generatedArray[hiddenIndex];
   generatedArray[hiddenIndex] = '..';
 
-  console.log(`Question: ${generatedArray.join(' ')}`);
-
-  return correctAnswer.toString();
+  return {
+    question: `${generatedArray.join(' ')}`,
+    correctAnswer: correctAnswer.toString(),
+  };
 };
 
 export default playBrainProgression;

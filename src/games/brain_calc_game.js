@@ -9,18 +9,23 @@ const chooseOperatorNumber = () => Math.floor(Math.random() * NUMBER_OF_OPERATOR
 const playBrainCalcGame = () => {
   const num1 = generateNum(MIN_RANGE, MAX_RANGE);
   const num2 = generateNum(MIN_RANGE, MAX_RANGE);
+  const result = {};
 
   switch (chooseOperatorNumber()) {
     case 1:
-      console.log(`Question: ${num1} + ${num2}`);
-      return (num1 + num2).toString();
+      result.question = `${num1} + ${num2}`;
+      result.correctAnswer = (num1 + num2).toString();
+      break;
     case 2:
-      console.log(`Question: ${num1} * ${num2}`);
-      return (num1 * num2).toString();
+      result.question = `${num1} * ${num2}`;
+      result.correctAnswer = (num1 * num2).toString();
+      break;
     default:
-      console.log(`Question: ${num1} - ${num2}`);
-      return (num1 - num2).toString();
+      result.question = `${num1} - ${num2}`;
+      result.correctAnswer = (num1 - num2).toString();
   }
+
+  return result;
 };
 
 export default playBrainCalcGame;

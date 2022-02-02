@@ -9,14 +9,15 @@ const startGame = (task, playGame) => {
   console.log(task);
 
   for (let countCorrectAnswers = 0; countCorrectAnswers < NUMBER_ROUNDS;) {
-    const expectedAnswer = playGame();
+    const gameData = playGame();
+    console.log(`Question: ${gameData.question}`);
     const actualAnswer = readlineSync.question('Your answer: ');
 
-    if (actualAnswer === expectedAnswer) {
+    if (actualAnswer === gameData.correctAnswer) {
       countCorrectAnswers += 1;
       console.log('Correct!');
     } else {
-      console.log(`'${actualAnswer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.`);
+      console.log(`'${actualAnswer}' is wrong answer ;(. Correct answer was '${gameData.correctAnswer}'.`);
       console.log(`Let's try again, ${name}!`);
       return;
     }

@@ -16,10 +16,10 @@ const playGcdGame = () => {
   const firstNum = generateNum(MIN_RANGE, MAX_RANGE);
   const secondNum = generateNum(MIN_RANGE, MAX_RANGE);
 
-  console.log(`Question: ${firstNum} ${secondNum}`);
-  const result = gcd(firstNum, secondNum);
-
-  return result.toString();
+  return {
+    question: `${firstNum} ${secondNum}`,
+    correctAnswer: gcd(firstNum, secondNum).toString(),
+  };
 };
 
 export default playGcdGame;

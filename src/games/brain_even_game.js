@@ -9,9 +9,10 @@ const playBrainEvenGame = () => {
   const number = generateNum(MIN_RANGE, MAX_RANGE);
   const expectedAnswer = correctAnswer(number);
 
-  console.log(`Question: ${number}`);
-
-  return expectedAnswer;
+  return {
+    question: number.toString(),
+    correctAnswer: expectedAnswer.toString(),
+  };
 };
 
 export default playBrainEvenGame;

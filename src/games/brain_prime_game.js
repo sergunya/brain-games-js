@@ -7,13 +7,16 @@ const PRIME_NUMBERS = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31,
 
 const playBrainPrimeGame = () => {
   const generatedNumber = generateNum(MIN_RANGE, MAX_RANGE);
-  console.log(`Question: ${generatedNumber}`);
+  const correctAnswer = 'no';
 
   if (PRIME_NUMBERS.includes(generatedNumber)) {
     return 'yes';
   }
 
-  return 'no';
+  return {
+    question: generatedNumber.toString(),
+    correctAnswer: correctAnswer.toString(),
+  };
 };
 
 export default playBrainPrimeGame;
