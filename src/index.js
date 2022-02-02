@@ -8,9 +8,7 @@ const startGame = (task, playGame) => {
   console.log(`Hello, ${name}!`);
   console.log(task);
 
-  let countCorrectAnswers = 0;
-
-  while (countCorrectAnswers !== NUMBER_ROUNDS) {
+  for (let countCorrectAnswers = 0; countCorrectAnswers < NUMBER_ROUNDS;) {
     const expectedAnswer = playGame();
     const actualAnswer = readlineSync.question('Your answer: ');
 
