@@ -1,43 +1,17 @@
 import readlineSync from 'readline-sync';
 import sayHelloToUser from './cli.js';
-import { playBrainEvenGame, getEvenGameTask } from './games/brain_even_game.js';
-import { playBrainCalcGame, getCalcGameTask } from './games/brain_calc_game.js';
-import { playGcdGame, getGcdGameTask } from './games/brain_gcd_game.js';
-import { playBrainProgression, getProgressionGameTask } from './games/brain_progression_game.js';
-import { playBrainPrimeGame, getPrimeGameTask } from './games/brain_prime_game.js';
 
-const chooseGame = (gameName) => {
-  switch (gameName) {
-    case 'brain-even':
-      console.log(getEvenGameTask());
-      return playBrainEvenGame;
-    case 'brain-calc':
-      console.log(getCalcGameTask());
-      return playBrainCalcGame;
-    case 'brain-gcd':
-      console.log(getGcdGameTask());
-      return playGcdGame;
-    case 'brain-progression':
-      console.log(getProgressionGameTask());
-      return playBrainProgression;
-    case 'brain-prime':
-      console.log(getPrimeGameTask());
-      return playBrainPrimeGame;
-    default:
-      console.log(getEvenGameTask());
-      return playBrainEvenGame;
-  }
-};
+const NUMBER_ROUNDS = 3;
 
-const startGame = (gameName) => {
+const startGame = (task, playGame) => {
   const name = sayHelloToUser();
   console.log(`Hello, ${name}!`);
+  console.log(task);
 
   let countCorrectAnswers = 0;
-  const askQuestion = chooseGame(gameName);
 
-  while (countCorrectAnswers !== 3) {
-    const expectedAnswer = askQuestion();
+  while (countCorrectAnswers !== NUMBER_ROUNDS) {
+    const expectedAnswer = playGame();
     const actualAnswer = readlineSync.question('Your answer: ');
 
     if (actualAnswer === expectedAnswer) {

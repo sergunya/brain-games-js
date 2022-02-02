@@ -1,13 +1,17 @@
 import generateNum from './utils.js';
 
-const correctAnswer = (number) => (number % 2 === 0 ? 'yes' : 'no');
-export const getEvenGameTask = () => 'Answer "yes" if the number is even, otherwise answer "no".';
+const MIN_RANGE = 1;
+const MAX_RANGE = 100;
 
-export const playBrainEvenGame = () => {
-  const number = generateNum(1, 100);
+const correctAnswer = (number) => (number % 2 === 0 ? 'yes' : 'no');
+
+const playBrainEvenGame = () => {
+  const number = generateNum(MIN_RANGE, MAX_RANGE);
   const expectedAnswer = correctAnswer(number);
 
   console.log(`Question: ${number}`);
 
   return expectedAnswer;
 };
+
+export default playBrainEvenGame;

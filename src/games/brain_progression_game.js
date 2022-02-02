@@ -1,11 +1,15 @@
 import generateNum from './utils.js';
 
-export const getProgressionGameTask = () => 'What number is missing in the progression?';
+const RANDOM_RANGES = {
+  length: { min: 5, max: 15 },
+  step: { min: 2, max: 5 },
+  initNumber: { min: 1, max: 10 },
+};
 
 const generateProgression = () => {
-  const progressionLength = generateNum(5, 15);
-  const step = generateNum(2, 5);
-  const initNum = generateNum(1, 10);
+  const progressionLength = generateNum(RANDOM_RANGES.length.min, RANDOM_RANGES.length.max);
+  const step = generateNum(RANDOM_RANGES.step.min, RANDOM_RANGES.step.max);
+  const initNum = generateNum(RANDOM_RANGES.initNumber.min, RANDOM_RANGES.initNumber.max);
   const result = [];
   result.push(initNum);
 
@@ -17,7 +21,7 @@ const generateProgression = () => {
   return result;
 };
 
-export const playBrainProgression = () => {
+const playBrainProgression = () => {
   const generatedArray = generateProgression();
   const hiddenIndex = generateNum(0, generatedArray.length - 1);
   const correctAnswer = generatedArray[hiddenIndex];
@@ -27,3 +31,5 @@ export const playBrainProgression = () => {
 
   return correctAnswer.toString();
 };
+
+export default playBrainProgression;

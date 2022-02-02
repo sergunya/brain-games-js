@@ -1,11 +1,14 @@
 import generateNum from './utils.js';
 
-const chooseOperatorNumber = () => Math.floor(Math.random() * 3);
-export const getCalcGameTask = () => 'What is the result of the expression?';
+const MIN_RANGE = 1;
+const MAX_RANGE = 20;
+const NUMBER_OF_OPERATORS = 3;
 
-export const playBrainCalcGame = () => {
-  const num1 = generateNum(1, 20);
-  const num2 = generateNum(1, 20);
+const chooseOperatorNumber = () => Math.floor(Math.random() * NUMBER_OF_OPERATORS);
+
+const playBrainCalcGame = () => {
+  const num1 = generateNum(MIN_RANGE, MAX_RANGE);
+  const num2 = generateNum(MIN_RANGE, MAX_RANGE);
 
   switch (chooseOperatorNumber()) {
     case 1:
@@ -19,3 +22,5 @@ export const playBrainCalcGame = () => {
       return (num1 - num2).toString();
   }
 };
+
+export default playBrainCalcGame;

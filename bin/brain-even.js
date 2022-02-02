@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 
 import startGame from '../src/index.js';
+import playBrainEvenGame from '../src/games/brain_even_game.js';
 
-startGame('brain-even');
+const task = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+startGame(task, playBrainEvenGame);
