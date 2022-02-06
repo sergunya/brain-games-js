@@ -1,4 +1,5 @@
 import generateNum from './utils.js';
+import startGame from '../index.js';
 
 const MIN_RANGE = 1;
 const MAX_RANGE = 20;
@@ -28,4 +29,9 @@ const playBrainCalcGame = () => {
   return result;
 };
 
-export default playBrainCalcGame;
+const initBrainCalcGame = () => {
+  const task = 'What is the result of the expression?';
+  startGame(task, playBrainCalcGame);
+};
+
+export default initBrainCalcGame;

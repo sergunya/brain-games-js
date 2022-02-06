@@ -1,4 +1,5 @@
 import generateNum from './utils.js';
+import startGame from '../index.js';
 
 const MIN_RANGE = 1;
 const MAX_RANGE = 20;
@@ -22,4 +23,9 @@ const playGcdGame = () => {
   };
 };
 
-export default playGcdGame;
+const initGcdGame = () => {
+  const task = 'Find the greatest common divisor of given numbers.';
+  startGame(task, playGcdGame);
+};
+
+export default initGcdGame;

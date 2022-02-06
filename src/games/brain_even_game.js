@@ -1,13 +1,12 @@
 import generateNum from './utils.js';
+import startGame from '../index.js';
 
 const MIN_RANGE = 1;
 const MAX_RANGE = 100;
 
-const correctAnswer = (number) => (number % 2 === 0 ? 'yes' : 'no');
-
 const playBrainEvenGame = () => {
   const number = generateNum(MIN_RANGE, MAX_RANGE);
-  const expectedAnswer = correctAnswer(number);
+  const expectedAnswer = number % 2 === 0 ? 'yes' : 'no';
 
   return {
     question: number.toString(),
@@ -15,4 +14,9 @@ const playBrainEvenGame = () => {
   };
 };
 
-export default playBrainEvenGame;
+const initBrainEvenGame = () => {
+  const task = 'Answer "yes" if the number is even, otherwise answer "no".';
+  startGame(task, playBrainEvenGame);
+};
+
+export default initBrainEvenGame;

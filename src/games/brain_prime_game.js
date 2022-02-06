@@ -1,4 +1,5 @@
 import generateNum from './utils.js';
+import startGame from '../index.js';
 
 const MIN_RANGE = 1;
 const MAX_RANGE = 100;
@@ -19,4 +20,9 @@ const playBrainPrimeGame = () => {
   };
 };
 
-export default playBrainPrimeGame;
+const initBrainPrimeGame = () => {
+  const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+  startGame(task, playBrainPrimeGame);
+};
+
+export default initBrainPrimeGame;

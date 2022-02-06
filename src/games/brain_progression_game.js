@@ -1,4 +1,5 @@
 import generateNum from './utils.js';
+import startGame from '../index.js';
 
 const RANDOM_RANGES = {
   length: { min: 5, max: 15 },
@@ -33,4 +34,9 @@ const playBrainProgression = () => {
   };
 };
 
-export default playBrainProgression;
+const initBrainProgressionGame = () => {
+  const task = 'What number is missing in the progression?';
+  startGame(task, playBrainProgression);
+};
+
+export default initBrainProgressionGame;
