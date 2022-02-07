@@ -1,16 +1,14 @@
-import generateNum from './utils.js';
+import generateNum from '../generator.js';
 import startGame from '../index.js';
 
-const MIN_RANGE = 1;
-const MAX_RANGE = 100;
+const isEven = (n) => (n % 2 === 0);
 
 const playBrainEvenGame = () => {
-  const number = generateNum(MIN_RANGE, MAX_RANGE);
-  const expectedAnswer = number % 2 === 0 ? 'yes' : 'no';
+  const number = generateNum();
 
   return {
     question: number.toString(),
-    correctAnswer: expectedAnswer.toString(),
+    correctAnswer: `${isEven(number) ? 'yes' : 'no'}`,
   };
 };
 

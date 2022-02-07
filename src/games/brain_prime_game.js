@@ -1,22 +1,26 @@
-import generateNum from './utils.js';
+import generateNum from '../generator.js';
 import startGame from '../index.js';
 
-const MIN_RANGE = 1;
-const MAX_RANGE = 100;
-const PRIME_NUMBERS = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31,
-  37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101];
-
-const playBrainPrimeGame = () => {
-  const generatedNumber = generateNum(MIN_RANGE, MAX_RANGE);
-  let correctAnswer = 'no';
-
-  if (PRIME_NUMBERS.includes(generatedNumber)) {
-    correctAnswer = 'yes';
+const isPrime = (num) => {
+  if (num === 2) {
+    return true;
   }
 
+  for (let i = 2; i <= Math.sqrt(num); i += 1) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+const playBrainPrimeGame = () => {
+  const num = generateNum(2, 100);
+
   return {
-    question: generatedNumber.toString(),
-    correctAnswer: correctAnswer.toString(),
+    question: num.toString(),
+    correctAnswer: isPrime(num) ? 'yes' : 'no',
   };
 };
 

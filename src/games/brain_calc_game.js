@@ -1,32 +1,30 @@
-import generateNum from './utils.js';
+import generateNum from '../generator.js';
 import startGame from '../index.js';
 
-const MIN_RANGE = 1;
-const MAX_RANGE = 20;
-const NUMBER_OF_OPERATORS = 3;
+const OPERATORS = ['+', '-', '*'];
 
-const chooseOperatorNumber = () => Math.floor(Math.random() * NUMBER_OF_OPERATORS);
+const chooseOperatorNumber = () => Math.floor(Math.random() * OPERATORS.length);
+
+const calculate = (num1, num2, operator) => {
+  switch (operator) {
+    case '+':
+      return num1 + num2;
+    case '*':
+      return num1 * num2;
+    default:
+      return num1 - num2;
+  }
+};
 
 const playBrainCalcGame = () => {
-  const num1 = generateNum(MIN_RANGE, MAX_RANGE);
-  const num2 = generateNum(MIN_RANGE, MAX_RANGE);
-  const result = {};
+  const num1 = generateNum();
+  const num2 = generateNum();
+  const operator = OPERATORS[chooseOperatorNumber()];
 
-  switch (chooseOperatorNumber()) {
-    case 1:
-      result.question = `${num1} + ${num2}`;
-      result.correctAnswer = (num1 + num2).toString();
-      break;
-    case 2:
-      result.question = `${num1} * ${num2}`;
-      result.correctAnswer = (num1 * num2).toString();
-      break;
-    default:
-      result.question = `${num1} - ${num2}`;
-      result.correctAnswer = (num1 - num2).toString();
-  }
-
-  return result;
+  return {
+    question: `${num1} ${operator} ${num2}`,
+    correctAnswer: calculate(num1, num2, operator).toString(),
+  };
 };
 
 const initBrainCalcGame = () => {

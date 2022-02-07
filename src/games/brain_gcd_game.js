@@ -1,8 +1,5 @@
-import generateNum from './utils.js';
+import generateNum from '../generator.js';
 import startGame from '../index.js';
-
-const MIN_RANGE = 1;
-const MAX_RANGE = 20;
 
 const gcd = (n, m) => {
   if (m > 0) {
@@ -14,8 +11,8 @@ const gcd = (n, m) => {
 };
 
 const playGcdGame = () => {
-  const firstNum = generateNum(MIN_RANGE, MAX_RANGE);
-  const secondNum = generateNum(MIN_RANGE, MAX_RANGE);
+  const firstNum = generateNum();
+  const secondNum = generateNum();
 
   return {
     question: `${firstNum} ${secondNum}`,
