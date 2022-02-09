@@ -1,4 +1,4 @@
-import generateNum from '../generate_number.js';
+import generateRandomNum from '../generate_random_number.js';
 
 export const TASK = 'What is the result of the expression?';
 
@@ -18,9 +18,9 @@ const calculate = (num1, num2, operator) => {
 };
 
 export const playBrainCalcGame = () => {
-  const num1 = generateNum();
-  const num2 = generateNum();
-  const operator = OPERATORS[generateNum(0, 2)];
+  const num1 = generateRandomNum();
+  const num2 = generateRandomNum();
+  const operator = OPERATORS[generateRandomNum(0, 2)];
 
   return {
     question: `${num1} ${operator} ${num2}`,

@@ -1,4 +1,4 @@
-import generateNum from '../generate_number.js';
+import generateNum from '../generate_random_number.js';
 
 export const TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 

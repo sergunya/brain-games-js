@@ -1,4 +1,4 @@
-import generateNum from '../generate_number.js';
+import generateRandomNum from '../generate_random_number.js';
 
 export const TASK = 'Find the greatest common divisor of given numbers.';
 
@@ -12,8 +12,8 @@ const gcd = (n, m) => {
 };
 
 export const playGcdGame = () => {
-  const firstNum = generateNum();
-  const secondNum = generateNum();
+  const firstNum = generateRandomNum();
+  const secondNum = generateRandomNum();
 
   return {
     question: `${firstNum} ${secondNum}`,
