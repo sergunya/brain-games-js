@@ -1,5 +1,6 @@
 import generateNum from '../generate_number.js';
-import startGame from '../index.js';
+
+export const TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
   if (num === 2) {
@@ -15,7 +16,7 @@ const isPrime = (num) => {
   return true;
 };
 
-const playBrainPrimeGame = () => {
+export const playBrainPrimeGame = () => {
   const num = generateNum(2, 100);
 
   return {
@@ -23,10 +24,3 @@ const playBrainPrimeGame = () => {
     correctAnswer: isPrime(num) ? 'yes' : 'no',
   };
 };
-
-const initBrainPrimeGame = () => {
-  const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  startGame(task, playBrainPrimeGame);
-};
-
-export default initBrainPrimeGame;

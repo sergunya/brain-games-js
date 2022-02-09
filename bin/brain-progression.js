@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
-import initBrainProgressionGame from '../src/games/brain_progression_game.js';
+import { TASK, playBrainProgression } from '../src/games/brain_progression_game.js';
+import startGame from '../src/index.js';
 
-initBrainProgressionGame();
+startGame(TASK, playBrainProgression);

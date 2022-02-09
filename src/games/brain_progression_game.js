@@ -1,5 +1,6 @@
 import generateNum from '../generate_number.js';
-import startGame from '../index.js';
+
+export const TASK = 'What number is missing in the progression?';
 
 const generateProgression = (start, step, len = 10) => {
   const result = [];
@@ -11,7 +12,7 @@ const generateProgression = (start, step, len = 10) => {
   return result;
 };
 
-const playBrainProgression = () => {
+export const playBrainProgression = () => {
   const generatedArray = generateProgression(generateNum(), generateNum(2, 5));
   const hiddenIndex = generateNum(0, generatedArray.length - 1);
   const correctAnswer = generatedArray[hiddenIndex];
@@ -22,10 +23,3 @@ const playBrainProgression = () => {
     correctAnswer: correctAnswer.toString(),
   };
 };
-
-const initBrainProgressionGame = () => {
-  const task = 'What number is missing in the progression?';
-  startGame(task, playBrainProgression);
-};
-
-export default initBrainProgressionGame;

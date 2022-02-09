@@ -1,9 +1,10 @@
 import generateNum from '../generate_number.js';
-import startGame from '../index.js';
+
+export const TASK = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (n) => (n % 2 === 0);
 
-const playBrainEvenGame = () => {
+export const playBrainEvenGame = () => {
   const number = generateNum();
 
   return {
@@ -11,10 +12,3 @@ const playBrainEvenGame = () => {
     correctAnswer: isEven(number) ? 'yes' : 'no',
   };
 };
-
-const initBrainEvenGame = () => {
-  const task = 'Answer "yes" if the number is even, otherwise answer "no".';
-  startGame(task, playBrainEvenGame);
-};
-
-export default initBrainEvenGame;
