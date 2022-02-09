@@ -1,4 +1,4 @@
-import generateNum from '../generator.js';
+import generateNum from '../generate_number.js';
 import startGame from '../index.js';
 
 const isPrime = (num) => {

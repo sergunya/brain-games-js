@@ -1,10 +1,10 @@
-import generateNum from '../generator.js';
+import generateNum from '../generate_number.js';
 import startGame from '../index.js';
 
-const generateProgression = (start, step, last = 100) => {
+const generateProgression = (start, step, len = 10) => {
   const result = [];
 
-  for (let i = start; start + step * i < last; i += step) {
+  for (let i = 0; i < len; i += 1) {
     result.push(start + step * i);
   }
 

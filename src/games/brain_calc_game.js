@@ -1,9 +1,7 @@
-import generateNum from '../generator.js';
+import generateNum from '../generate_number.js';
 import startGame from '../index.js';
 
 const OPERATORS = ['+', '-', '*'];
-
-const chooseOperatorNumber = () => Math.floor(Math.random() * OPERATORS.length);
 
 const calculate = (num1, num2, operator) => {
   switch (operator) {
@@ -11,15 +9,17 @@ const calculate = (num1, num2, operator) => {
       return num1 + num2;
     case '*':
       return num1 * num2;
-    default:
+    case '-':
       return num1 - num2;
+    default:
+      return null;
   }
 };
 
 const playBrainCalcGame = () => {
   const num1 = generateNum();
   const num2 = generateNum();
-  const operator = OPERATORS[chooseOperatorNumber()];
+  const operator = OPERATORS[generateNum(0, 2)];
 
   return {
     question: `${num1} ${operator} ${num2}`,
