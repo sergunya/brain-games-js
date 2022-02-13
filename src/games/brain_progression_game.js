@@ -1,6 +1,7 @@
 import generateRandomNum from '../generate_random_number.js';
+import startGame from '../index.js';
 
-export const TASK = 'What number is missing in the progression?';
+const TASK = 'What number is missing in the progression?';
 
 const generateProgression = (start, step, len = 10) => {
   const result = [];
@@ -12,7 +13,7 @@ const generateProgression = (start, step, len = 10) => {
   return result;
 };
 
-export const playBrainProgression = () => {
+const playBrainProgression = () => {
   const generatedArray = generateProgression(generateRandomNum(), generateRandomNum(2, 5));
   const hiddenIndex = generateRandomNum(0, generatedArray.length - 1);
   const correctAnswer = generatedArray[hiddenIndex];
@@ -23,3 +24,9 @@ export const playBrainProgression = () => {
     correctAnswer: correctAnswer.toString(),
   };
 };
+
+const startProgressionGame = () => {
+  startGame(TASK, playBrainProgression);
+};
+
+export default startProgressionGame;

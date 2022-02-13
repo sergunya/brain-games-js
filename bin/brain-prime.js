@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import { TASK, playBrainPrimeGame } from '../src/games/brain_prime_game.js';
-import startGame from '../src/index.js';
+import startPrimeGame from '../src/games/brain_prime_game.js';
 
-startGame(TASK, playBrainPrimeGame);
+startPrimeGame();
